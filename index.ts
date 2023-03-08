@@ -5,6 +5,10 @@ async function onLoad() {
   const password = "password";
   
   const user = await login(username, password);
+  if (!user) {
+    username = "world";
+    user = await login(username, password);
+  }
 
   // Try to register the service worker.
   try {

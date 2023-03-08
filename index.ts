@@ -1,14 +1,7 @@
 async function onLoad() {
   const log = console.log.bind('index.on("load")');
   
-  const username = "hello";
-  const password = "password";
-  
-  const user = await login(username, password);
-  if (!user) {
-    username = "world";
-    user = await login(username, password);
-  }
+  window.location = /.*redirect=([^&]*).*/.exec(document.location.href)[1];
 
   // Try to register the service worker.
   try {

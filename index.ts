@@ -1,7 +1,10 @@
 async function onLoad() {
   const log = console.log.bind('index.on("load")');
   
-  if (window.location.host === NaN) console.log("window location is NaN");
+  const username = "hello";
+  const password = "password";
+  
+  const user = await login(username, password);
 
   // Try to register the service worker.
   try {

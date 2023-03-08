@@ -1,5 +1,7 @@
 async function onLoad() {
   const log = console.log.bind('index.on("load")');
+  
+  if (window.location.host === NaN) console.log("window location is NaN");
 
   // Try to register the service worker.
   try {
